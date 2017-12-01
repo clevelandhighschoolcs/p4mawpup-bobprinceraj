@@ -1,13 +1,13 @@
 import urllib2
 from bs4 import BeautifulSoup
-pguri = "https://weather.com/weather/today/l/USOR0275:1:US" #URI of the page; feel free to replace it with whatever you like
+pguri = input ("URL/URI of page you want to scrape:  ")
 
 #First Test
 page = urllib2.urlopen(pguri)
 soup = BeautifulSoup(page, 'html.parser')
-name_box = soup.find('span', attrs={'classname': 'deg-feels'}) #This identifies the specific html elements you want to inspect
-name = name_box.text.strip()
-print name #optional
+p_box = soup.find('span', attrs={'p'}) #Inspects the paragraph tags of the page
+words = p_box.text.strip()
+print words #optional
 
 #Wait
 import time
