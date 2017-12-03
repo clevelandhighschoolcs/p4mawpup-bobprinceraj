@@ -1,6 +1,6 @@
 import urllib2
 from bs4 import BeautifulSoup
-pguri = "https://weather.com/weather/today/l/USOR0275:1:US" #URI of the page; feel free to replace it with whatever you like
+pguri = raw_input("URL/URI of the page you want to inspect:  ")
 
 #First Test
 page = urllib2.urlopen(pguri)
