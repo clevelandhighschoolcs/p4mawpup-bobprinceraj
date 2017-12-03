@@ -21,7 +21,7 @@ p_box2 = soup.find('p') #Same html elements as above
 words2 = p_box2.text.strip()
 if (words2 != words):
 	print "Text has changed." #Make this whatever you like
-	winsound.Beep(2500, 1000)
+	winsound.Beep(2500, 1200)
 else:
 	print "Text has not changed." #Make this whatever you like
 	winsound.Beep(250, 2000)
