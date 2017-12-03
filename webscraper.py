@@ -1,6 +1,6 @@
 import urllib2
 from bs4 import BeautifulSoup
-pguri = raw_input("URL/URI of page you want to scrape:  ")
+pguri = raw_input("URL/URI of page you want to scrape (including http or https):  ")
 
 #First Test
 page = urllib2.urlopen(pguri)
