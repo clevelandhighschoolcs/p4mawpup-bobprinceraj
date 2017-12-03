@@ -7,7 +7,7 @@
 3. If you don't have BeautifulSoup4 installed, you'll need that. In the command line, type __pip install BeautifulSoup4__.
 Wait for it to install, then continue to the next part.
 
-4. The program is ready to run! Run the program in whatever environment you like. Feel free to change the url or html elements.
+4. The program is ready to run! Run the program in whatever environment you like. Feel free to change the html elements to whatever you like.
 
 ## Sources:
 [How to Scrape Websites With Python and BeautifulSoup](https://medium.freecodecamp.org/how-to-scrape-websites-with-python-and-beautifulsoup-5946935d93fe) by Justin Yek
