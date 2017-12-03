@@ -1,6 +1,6 @@
 import urllib2
 from bs4 import BeautifulSoup
-pguri = input ("URL/URI of page you want to scrape:  ")
+pguri = "https://weather.com/weather/today/l/USOR0275:1:US" #URI of the page; feel free to replace it with whatever you like
 
 #First Test
 page = urllib2.urlopen(pguri)
@@ -12,9 +12,8 @@ print words #optional
 #Wait
 import time
 import winsound
-t = input ("How long do you want to run the program (in secs)?  ")
-tm = float(t)
-time.sleep(tm)
+t = float(raw_input ("How long do you want to run the program (in secs)?  "))
+time.sleep(t)
 
 #Second Test
 page = urllib2.urlopen(pguri)
