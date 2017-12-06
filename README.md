@@ -11,3 +11,5 @@ Wait for it to install, then continue to the next part.
 
 ## Sources:
 [How to Scrape Websites With Python and BeautifulSoup](https://medium.freecodecamp.org/how-to-scrape-websites-with-python-and-beautifulsoup-5946935d93fe) by Justin Yek
+## How the Program Works:
+![Program Flowchart](https://github.com/bobprinceraj/CS-year-1/blob/master/Program%20Flowchart.png?raw=true)
