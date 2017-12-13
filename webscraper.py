@@ -5,8 +5,8 @@ from twilio.rest import Client
 
 #Get Info
 pguri = raw_input("URL/URI of page you want to scrape (including http or https):  ")
-message = raw_input("Do you want to get a message of the results?(y/n)  ")
 t = float(raw_input ("How long do you want to wait in between scrapings (in seconds, must be greater than one)?  "))
+message = raw_input("Do you want to get a message of the results?(y/n)  ")
 if (message == "y"):
 	twil = raw_input("Do you have a twilio account?(y/n)  ")
 	if (twil == "y"):
