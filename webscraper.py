@@ -11,10 +11,11 @@ if (message == "y"):
 	if (twil == "y"):
 		twill = raw_input("Do you want to use your twilio account?(y/n)  ")
 		if (twill == "y"):
-			account_sid = raw_input("What is your account sid? ")
-			auth_token = raw_input("What is your authorization token? ")
-			twilio_phone_number = raw_input("What is your Twilio phone number? ")
-			my_phone_number = raw_input("What is your phone number? (must be registered in twilio).")
+			account_sid = raw_input("What is your account sid?  ")
+			auth_token = raw_input("What is your authorization token?  ")
+			twilio_phone_number = raw_input("What is your Twilio phone number?  ")
+			my_phone_number = raw_input("What is your phone number? (must be registered in twilio)?  ")
+t = float(raw_input ("How long do you want to wait in between scrapings (in seconds, must be greater than one)?  "))
 
 #First Test
 page = urllib2.urlopen(pguri)
@@ -33,7 +34,6 @@ def message():
 #Wait
 import time
 import winsound
-t = float(raw_input ("How long do you want to wait in between scrapings (in seconds, must be greater than one)?  "))
 if t < 1:
 	print("time delay must be greater than one, read the directions next time")
 	quit()
