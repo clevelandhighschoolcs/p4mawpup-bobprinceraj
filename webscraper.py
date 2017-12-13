@@ -6,6 +6,7 @@ from twilio.rest import Client
 #Get Info
 pguri = raw_input("URL/URI of page you want to scrape (including http or https):  ")
 message = raw_input("Do you want to get a message of the results?(y/n)  ")
+t = float(raw_input ("How long do you want to wait in between scrapings (in seconds, must be greater than one)?  "))
 if (message == "y"):
 	twil = raw_input("Do you have a twilio account?(y/n)  ")
 	if (twil == "y"):
@@ -15,7 +16,6 @@ if (message == "y"):
 			auth_token = raw_input("What is your authorization token?  ")
 			twilio_phone_number = raw_input("What is your Twilio phone number?  ")
 			my_phone_number = raw_input("What is your phone number? (must be registered in twilio)?  ")
-t = float(raw_input ("How long do you want to wait in between scrapings (in seconds, must be greater than one)?  "))
 
 #First Test
 page = urllib2.urlopen(pguri)
