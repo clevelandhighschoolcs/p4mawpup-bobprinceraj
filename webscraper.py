@@ -1,14 +1,20 @@
 import urllib2
 from bs4 import BeautifulSoup
-pguri = raw_input("URL/URI of page you want to scrape (including http or https):  ")
 import requests
 from twilio.rest import Client
 
 #Get Info
-account_sid = raw_input("What is your account sid? ")
-auth_token = raw_input("What is your authorization token? ")
-twilio_phone_number = raw_input("What is your Twilio phone number? ")
-my_phone_number = raw_input("What is your phone number? (must be registered in twilio).")
+pguri = raw_input("URL/URI of page you want to scrape (including http or https):  ")
+message = raw_input("Do you want to get a message of the results?(y/n)  ")
+if (message == "y"):
+	twil = raw_input("Do you have a twilio account?(y/n)  ")
+	if (twil == "y"):
+		twill = raw_input("Do you want to use your twilio account?(y/n)  ")
+		if (twill == "y"):
+			account_sid = raw_input("What is your account sid? ")
+			auth_token = raw_input("What is your authorization token? ")
+			twilio_phone_number = raw_input("What is your Twilio phone number? ")
+			my_phone_number = raw_input("What is your phone number? (must be registered in twilio).")
 
 #First Test
 page = urllib2.urlopen(pguri)
@@ -44,5 +50,6 @@ while words2 == words:
 	
 body = "Text has changed." #Make this whatever you like
 print body
-message()
+if (twill == "y"):
+	message()
 winsound.Beep(2500, 1200)
