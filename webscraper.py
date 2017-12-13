@@ -15,7 +15,7 @@ page = urllib2.urlopen(pguri)
 soup = BeautifulSoup(page, "html.parser")
 p_box = soup.find("p") #Inspects the paragraph tags of the page
 words = p_box.text.strip()
-
+words2 = words
 #Send a message
 def message():
 	tclient = Client(account_sid, auth_token)
@@ -27,21 +27,22 @@ def message():
 #Wait
 import time
 import winsound
-t = float(raw_input ("How long do you want to run the program (in secs)?  "))
+t = float(raw_input ("How long do you want to wait in between scrapings (in seconds, must be greater than one)?  "))
+if t < 1:
+	print("time delay must be greater than one, read the directions next time")
+	quit()
 time.sleep(t)
 
+
 #Second Test
-page = urllib2.urlopen(pguri)
-soup = BeautifulSoup(page, "html.parser")
-p_box2 = soup.find('p') #Same html elements as above
-words2 = p_box2.text.strip()
-if (words2 != words):
-	body = "Text has changed." #Make this whatever you like
-	print body
-	message()
-	winsound.Beep(2500, 1200)
-else:
-	body = "Text has not changed." #Make this whatever you like
-	print body
-	message()
-	winsound.Beep(250, 2000)
+while words2 == words:
+	page = urllib2.urlopen(pguri)
+	soup = BeautifulSoup(page, "html.parser")
+	p_box2 = soup.find('p') #Same html elements as above
+	words2 = p_box2.text.strip()
+	time.sleep(t)
+	
+body = "Text has changed." #Make this whatever you like
+print body
+message()
+winsound.Beep(2500, 1200)
