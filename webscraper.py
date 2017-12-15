@@ -49,7 +49,12 @@ while words2 == words:
 	time.sleep(t)
 	
 body = "Text has changed." #Make this whatever you like
-print body
-if (twill == "y"):
+if (message != "y"):
+	print body
+elif(twil != "y"):
+	print body
+elif(twill != "y")
+	print body
+else:
 	message()
 winsound.Beep(2500, 1200)
